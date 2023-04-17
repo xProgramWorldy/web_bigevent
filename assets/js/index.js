@@ -35,13 +35,13 @@ function getUserInfo() {
 //2. 渲染用户的头像
 function renderAvater(dataObj) {
     let uname = dataObj.nickname || dataObj.username;
-    $('#welcome').html('欢迎:' + uname);
+    $('#welcome').html('欢迎 ' + uname);
     if (dataObj.user_pic !== null) {
         $('.layui-nav-img').attr('src', dataObj.user_pic).show();
         $('.text-avatar').hide();
     } else {
        $('.layui-nav-img').hide();
-       $('.text-avatar').html(uname[5].toUpperCase()).show();
+       $('.text-avatar').html(uname[0].toUpperCase()).show();
     }
 
 }

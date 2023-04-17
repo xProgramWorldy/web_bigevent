@@ -47,7 +47,6 @@ $(function() {
             success: function(res) {
                if (res.status != 0) {
                 //  return console.log(res.message);
-                console.log(res.message);
                 return layer.msg("注册失败");
                }
                layer.msg('注册成功，请登录!');
@@ -66,7 +65,6 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                if (res.status != 0) {
-                console.log(res);
                  return layer.msg("登录失败");
                }
                layer.msg("登录成功");
